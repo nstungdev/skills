@@ -1,0 +1,15 @@
+{
+  "name": "nstung-skills",
+  "description": "Custom Agent Skills by Son Tung Nguyen, grouped into plugins.",
+  "owner": { "name": "Son Tung Nguyen" },
+  "plugins": [
+    {
+      "name": "nstung-core",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Core skills: ask-user (formatted questions and confirmations with a recommended answer).",
+      "author": { "name": "Son Tung Nguyen" },
+      "skills": ["./skills/core"]
+    }
+  ]
+}
