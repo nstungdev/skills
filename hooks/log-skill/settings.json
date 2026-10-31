@@ -1,0 +1,19 @@
+{
+  "// IMPORTANT: Place this file in the .claude/hooks/settings.json or .claude/hooks/settings.local.json path of your project to enable skill logging.": "This file configures a hook that logs every skill invocation and shows it on screen. It is recommended to use the .claude/hooks/settings.local.json file for this configuration, so that it is not checked into source control.",
+  "// REMINDER: Add gitignore rules for .claude/hooks/log-skill.ps1 and .claude/hooks/settings.local.json to avoid committing sensitive information.": "This is important to prevent sensitive information from being exposed in source control.",
+  
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$env:CLAUDE_PROJECT_DIR\\.claude\\hooks\\log-skill.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}
